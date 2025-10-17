@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background: linear-gradient(135deg, #ffc1e3, #ffb6d9, #ff99cc);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; 
+}
+
+.wrapper {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+    0 2px 5px rgba(0,0,0,0.2);
+}
+
+p {
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 60%;
+  font-size: 15px;
+}
+
+button {
+  background: #fff;
+  color: #ff69b4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: none; 
+}
+
+button:hover {
+  background: #ffe0ef;
+  transform: scale(1.05);
+}
+
+.cake-area {
+  position: relative;
+  margin: 40px auto;
+  width: 120px;
+  height: 120px;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 100px;
+  height: 90px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  border-radius: 50px 50px 0 0;
+  background: #fff; 
+}
+
+.heart::before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.shadow {
+  width: 60px;
+  height: 10px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  animation: shadowBounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes shadowBounce {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(0.7); opacity: 0.3; }
+}
+
+.recipe-box {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 20px;
+  font-style: italic;
+  white-space: pre-wrap;
+  animation: fadeIn 1s ease-in;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 13px;
+}
